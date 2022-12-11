@@ -21,179 +21,160 @@ document.querySelector("#totalnarx").textContent = `Total : $${totalNarx}`;
 
 // cheese Start
 
-let cheeseDiv = document.querySelector(".cheeseDiv");
 cheeseBtn.addEventListener("click", (e) => {
   e.preventDefault();
+  const cheese = document.createElement("div");
+  cheese.innerHTML = `<img src="./images/cheese.svg" alt="" />`;
 
-  let cheese = `<div class="cheese">
-  <img src="./images/cheese.svg" alt="" />
-</div>`;
-
-  cheeseDiv.innerHTML += cheese;
-
+  masalliqlar.prepend(cheese);
   //   Narx sozlamasi start
   totalNarx += 2;
   document.querySelector("#totalnarx").textContent = `Total : $${totalNarx}`;
   //   Narx sozlamasi End
-});
 
-cheeseDiv.addEventListener("click", (e) => {
-  e.preventDefault();
-  e.target.remove();
-
-  //   Narx sozlamasi start
-  totalNarx -= 2;
-  document.querySelector("#totalnarx").textContent = `Total : $${totalNarx}`;
-  //   Narx sozlamasi End
+  cheese.addEventListener("click", (e) => {
+    cheese.innerHTML = "";
+    masalliqlar.removeChild(cheese);
+    //   Narx sozlamasi start
+    totalNarx -= 2;
+    document.querySelector("#totalnarx").textContent = `Total : $${totalNarx}`;
+    //   Narx sozlamasi End
+  });
 });
 // cheese End
 
-// meat Start
+// pickle Start
 
-let meatDiv = document.querySelector(".meatDiv");
-meatBtn.addEventListener("click", (e) => {
+pickleBtn.addEventListener("click", (e) => {
   e.preventDefault();
+  const pickle = document.createElement("div");
+  pickle.innerHTML = `<img src="./images/pickle.svg" alt="" />`;
 
-  let meat = `<div class="meat">
-  <img src="./images/meat.svg" alt="" />
-</div>`;
-
-  meatDiv.innerHTML += meat;
-
-  //   Narx sozlamasi start
-  totalNarx += 5;
-  document.querySelector("#totalnarx").textContent = `Total : $${totalNarx}`;
-  //   Narx sozlamasi End
-});
-
-meatDiv.addEventListener("click", (e) => {
-  e.preventDefault();
-  e.target.remove();
-
-  //   Narx sozlamasi start
-  totalNarx -= 5;
-  document.querySelector("#totalnarx").textContent = `Total : $${totalNarx}`;
-  //   Narx sozlamasi End
-});
-// meat End
-
-// onion Start
-
-let onionDiv = document.querySelector(".onionDiv");
-onionBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-
-  let onion = `<div class="onion">
-  <img src="./images/onion.svg" alt="" />
-</div>`;
-
-  onionDiv.innerHTML += onion;
-
-  //   Narx sozlamasi start
-  totalNarx += 1;
-  document.querySelector("#totalnarx").textContent = `Total : $${totalNarx}`;
-  //   Narx sozlamasi End
-});
-
-onionDiv.addEventListener("click", (e) => {
-  e.preventDefault();
-  e.target.remove();
-  //   Narx sozlamasi start
-  totalNarx -= 1;
-  document.querySelector("#totalnarx").textContent = `Total : $${totalNarx}`;
-  //   Narx sozlamasi End
-});
-// onion End
-
-// salad Start
-
-let saladDiv = document.querySelector(".saladDiv");
-saladBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-
-  let salad = `<div class="salad">
-  <img src="./images/salad.svg" alt="" />
-</div>`;
-
-  saladDiv.innerHTML += salad;
-  //   Narx sozlamasi start
-  totalNarx += 1;
-  document.querySelector("#totalnarx").textContent = `Total : $${totalNarx}`;
-  //   Narx sozlamasi End
-});
-
-saladDiv.addEventListener("click", (e) => {
-  e.preventDefault();
-  e.target.remove();
-  //   Narx sozlamasi start
-  totalNarx -= 1;
-  document.querySelector("#totalnarx").textContent = `Total : $${totalNarx}`;
-  //   Narx sozlamasi End
-});
-// salad End
-
-// tomato Start
-
-let tomatoDiv = document.querySelector(".tomatoDiv");
-tomatoBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-
-  let tomato = `<div class="tomato">
-  <img src="./images/tomato.svg" alt="" />
-</div>`;
-
-  tomatoDiv.innerHTML += tomato;
-
+  masalliqlar.prepend(pickle);
   //   Narx sozlamasi start
   totalNarx += 2;
   document.querySelector("#totalnarx").textContent = `Total : $${totalNarx}`;
   //   Narx sozlamasi End
-});
 
-tomatoDiv.addEventListener("click", (e) => {
-  e.preventDefault();
-  e.target.remove();
-
-  //   Narx sozlamasi start
-  totalNarx -= 2;
-  document.querySelector("#totalnarx").textContent = `Total : $${totalNarx}`;
-  //   Narx sozlamasi End
-});
-// tomato End
-
-// pickle Start
-let pickleDiv = document.querySelector(".pickleDiv");
-pickleBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-
-  let pickle = `<div class="pickle">
-  <img src="./images/pickle.svg" alt="" />
-</div>`;
-
-  pickleDiv.innerHTML += pickle;
-
-  //   Narx sozlamasi start
-  totalNarx += 3;
-  document.querySelector("#totalnarx").textContent = `Total : $${totalNarx}`;
-  //   Narx sozlamasi End
-});
-
-pickleDiv.addEventListener("click", (e) => {
-  e.preventDefault();
-  e.target.remove();
-  //   Narx sozlamasi start
-  totalNarx -= 3;
-  document.querySelector("#totalnarx").textContent = `Total : $${totalNarx}`;
-  //   Narx sozlamasi End
+  pickle.addEventListener("click", (e) => {
+    pickle.innerHTML = "";
+    masalliqlar.removeChild(pickle);
+    //   Narx sozlamasi start
+    totalNarx -= 2;
+    document.querySelector("#totalnarx").textContent = `Total : $${totalNarx}`;
+    //   Narx sozlamasi End
+  });
 });
 // pickle End
 
+// tomato Start
+
+tomatoBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  const tomato = document.createElement("div");
+  tomato.innerHTML = `<img src="./images/tomato.svg" alt="" />`;
+
+  masalliqlar.prepend(tomato);
+  //   Narx sozlamasi start
+  totalNarx += 2;
+  document.querySelector("#totalnarx").textContent = `Total : $${totalNarx}`;
+  //   Narx sozlamasi End
+
+  tomato.addEventListener("click", (e) => {
+    tomato.innerHTML = " ";
+    masalliqlar.removeChild(tomato);
+    //   Narx sozlamasi start
+    totalNarx -= 2;
+    document.querySelector("#totalnarx").textContent = `Total : $${totalNarx}`;
+    //   Narx sozlamasi End
+  });
+});
+// tomato End
+
+// onion Start
+
+onionBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  const onion = document.createElement("div");
+  onion.innerHTML = `<img src="./images/onion.svg" alt="" />`;
+
+  masalliqlar.prepend(onion);
+  //   Narx sozlamasi start
+  totalNarx += 2;
+  document.querySelector("#totalnarx").textContent = `Total : $${totalNarx}`;
+  //   Narx sozlamasi End
+
+  onion.addEventListener("click", (e) => {
+    onion.innerHTML = " ";
+    masalliqlar.removeChild(onion);
+    //   Narx sozlamasi start
+    totalNarx -= 2;
+    document.querySelector("#totalnarx").textContent = `Total : $${totalNarx}`;
+    //   Narx sozlamasi End
+  });
+});
+// onion End
+
+// meat Start
+
+meatBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  const meat = document.createElement("div");
+  meat.innerHTML = `<img src="./images/meat.svg" alt="" />`;
+
+  masalliqlar.prepend(meat);
+  //   Narx sozlamasi start
+  totalNarx += 2;
+  document.querySelector("#totalnarx").textContent = `Total : $${totalNarx}`;
+  //   Narx sozlamasi End
+
+  meat.addEventListener("click", (e) => {
+    meat.innerHTML = " ";
+    masalliqlar.removeChild(meat);
+    //   Narx sozlamasi start
+    totalNarx -= 2;
+    document.querySelector("#totalnarx").textContent = `Total : $${totalNarx}`;
+    //   Narx sozlamasi End
+  });
+});
+// meat End
+
+// salad Start
+
+saladBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  const salad = document.createElement("div");
+  salad.innerHTML = `<img src="./images/salad.svg" alt="" />`;
+
+  masalliqlar.prepend(salad);
+  //   Narx sozlamasi start
+  totalNarx += 2;
+  document.querySelector("#totalnarx").textContent = `Total : $${totalNarx}`;
+  //   Narx sozlamasi End
+
+  salad.addEventListener("click", (e) => {
+    salad.innerHTML = " ";
+    masalliqlar.removeChild(salad);
+    //   Narx sozlamasi start
+    totalNarx -= 2;
+    document.querySelector("#totalnarx").textContent = `Total : $${totalNarx}`;
+    //   Narx sozlamasi End
+  });
+});
+// salad End
 // qayta kiritish start
 
 let qayta = document.querySelector("#qayta");
-masalliqlar.addEventListener("click", (e) => {
+qayta.addEventListener("click", (e) => {
   e.preventDefault();
-  e.target.remove();
+  // e.target.remove();
+  masalliqlar.innerHTML = "";
+
+  //   Narx sozlamasi start
+
+  totalNarx = 2;
+  document.querySelector("#totalnarx").textContent = `Total : $${totalNarx}`;
+  //   Narx sozlamasi End
 });
 
 // qayta kiritish End
